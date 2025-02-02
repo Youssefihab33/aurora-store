@@ -1,0 +1,93 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*  SCROLLBAR
+  width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #00000022;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+a {color: inherit;}
+.nav-item {text-decoration: none;}
+
+body{
+  max-width: 100vw;
+  min-height: 100%;
+  text-align: center;
+  background: black url("./bg1.jpg") no-repeat fixed center;
+  background-size: cover;
+
+  /* background: linear-gradient(137deg, rgba(61,82,160,1) 0%, rgba(112,145,230,1) 50%, rgba(134,151,196,1) 100%); */
+}
+
+header{
+  color: #fff;
+  background-color: #00000033;
+  border-radius: 0px 0px 50px 50px;
+}
+.navbar-toggler{filter: invert(1);}
+body, .logo, .logo-text, nav, .card{
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo-text{
+  color: #EDE8F5;
+  font-size: 2rem;
+  font-weight: 900;
+}
+header:hover .logo, header:hover .logo-text, header:hover nav, .card:hover nav{
+  filter: drop-shadow(1em 1em 1em #00ff00);
+}
+
+.card{
+  color: #fff;
+  background-color: #adbbda33;
+  border-radius: 20px;
+  padding: 15px;
+  min-width: 150px;
+  max-width: 250px;
+}
+
+
+footer{
+  color: #aaa;
+  background-color: #00000033;
+  bottom:0;
+  width: 100%;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
