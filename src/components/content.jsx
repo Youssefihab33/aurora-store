@@ -3,16 +3,22 @@ import parse from 'html-react-parser'
 
 let card = `<div className="card m-1">
                     <img src="/src/assets/react.svg?t=1738431118708" className="card-img-top" alt={testImg} />
-                    <h5>Example Product</h5>
-                    <p>Some quick example on the Example Product</p>
+                    <h5>Example Brand</h5>
+                    <p>Some quick example on the Example Brand</p>
                     <a className="btn btn-primary">More</a>            
                 </div>`
 
 export default function Content(){
     return(
-        <main className="container text-light my-4">
+        <main className="container-lg text-light my-4">
+            <div id="ads">
+                <h1>ADS</h1>
+            </div>
+
+            <br/>
+
             <h1 className="fw-bold">Aurora Originals</h1>
-            <div className="cardsWrapper d-flex flex justify-content-center overflow-x-scroll overflow-y-hidden m-4">
+            <div className="d-flex flex overflow-x-scroll m-4">
                 {parse(card)}
                 {parse(card)}
                 {parse(card)}
@@ -69,8 +75,10 @@ export default function Content(){
                 {parse(card)}
             </div>
 
+            <br/><hr/><br/>
+
             <h1 className="fw-bold">Hair, Skin Care and Accessories</h1>
-            <div className="cardsWrapper d-flex flex justify-content-center overflow-x-scroll overflow-y-hidden m-4">
+            <div className="d-flex flex overflow-x-scroll m-4">
                 {parse(card)}
                 {parse(card)}
                 {parse(card)}
