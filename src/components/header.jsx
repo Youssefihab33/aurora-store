@@ -2,15 +2,15 @@ import logoSrc from "../assets/logo.png";
 
 export default function Header() {
   return (
-    <header className="container d-flex flex-row justify-content-center align-items-center">
+    <header className="container-lg d-flex flex-row justify-content-center align-items-center">
       
-      <img className="navbar-brand logo m-2 p-2" height='100px' src={logoSrc} />
+      <img className="navbar-brand logo" src={logoSrc} />
       <span className="logo-text">Aurora Gallery</span>
 
-      <nav className="navbar navbar-expand-lg ms-5">
+      <nav className="navbar navbar-expand-lg justify-content-center align-items-center">
         
         <button
-          className="navbar-toggler mt-2 mx-5"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
