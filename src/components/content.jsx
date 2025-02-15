@@ -1,5 +1,5 @@
-import Card from './Card';
-import Slideshow from './slideshow/Slideshow';
+import Card from './Card/Card';
+import Slideshow from './Slideshow/Slideshow';
 import img1 from '../assets/pictures/products/img_1.jpg';
 import img2 from '../assets/pictures/products/img_2.jpg';
 import img3 from '../assets/pictures/products/img_3.jpg';

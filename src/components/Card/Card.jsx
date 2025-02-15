@@ -1,3 +1,5 @@
+import './card.css'
+
 const defTitle = 'Example Brand';
 const defDescription = 'Some quick example on the Example Brand';
 // const defImg = imgReact;
