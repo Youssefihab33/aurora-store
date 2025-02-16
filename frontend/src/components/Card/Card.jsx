@@ -1,7 +1,7 @@
 import './card.css'
 
-const defTitle = 'Example Brand';
-const defDescription = 'Some quick example on the Example Brand';
+const defTitle = 'Title';
+const defDescription = 'description';
 // const defImg = imgReact;
 
 export default function Card({
@@ -19,7 +19,7 @@ export default function Card({
 			<div className='card-bottom'>
 				<h5>{title}</h5>
 				<p>{description}</p>
-				<a href='#'>More...</a>
+				{/* <a href='#'>More...</a> */}
 			</div>
 		</div>
 	);

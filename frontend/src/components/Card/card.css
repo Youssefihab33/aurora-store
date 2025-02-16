@@ -3,16 +3,18 @@
 	color: inherit;
 	overflow: hidden;
 	background-color: #add8e699;
-	border-radius: 25px;
-	min-width: 150px;
-	min-height: fit-content;
-	height: 350px;
+	/* border-radius: 25px; */
+	border-radius: 150px;
+	
+	height: fit-content;
+	max-height: 350px;
+	/* height: 350px; */
 }
 .card > img {
 	margin-bottom: 10px;
 	object-fit: cover;
 	width: 100%;
-	height: 50%;
+	max-height: 200px;
 }
 .card-bottom {
 	color: inherit;
@@ -20,6 +22,6 @@
 }
 .card-bottom > a {
 	position: fixed;
-	bottom: 5px;
+	bottom: 0px;
 	text-decoration: none;
 }
