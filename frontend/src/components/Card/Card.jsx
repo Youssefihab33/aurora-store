@@ -1,14 +1,6 @@
 import './card.css'
 
-const defTitle = 'Title';
-const defDescription = 'description';
-// const defImg = imgReact;
-
-export default function Card({
-	title = defTitle,
-	description = defDescription,
-	img,
-}) {
+export default function Card({title='Title', description='description', img,}) {
 	return (
 		<div className='card m-1'>
 			<img
