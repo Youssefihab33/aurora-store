@@ -1,4 +1,12 @@
 :root {
+	--color1: #7b42ab;
+	--color2: #4568dc;
+	--color3: #283c5b;
+	--color4: #1a2a6c;
+	--dark-bg: #00000033;
+	--bg-gradient: linear-gradient(135deg,var(--color4),var(--color3),var(--color2),var(--color1),var(--color2),var(--color3),var(--color4));
+	--text-gradient: linear-gradient(135deg,var(--color2),var(--color1),var(--color2));
+
 	font-family: Inter, system-ui, Avenir,
 		Helvetica, Arial, sans-serif;
 	line-height: 1.5;
@@ -17,17 +25,17 @@
 }
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #adbbda22;
+	background: var(--color3);
 	border-radius: 15px;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #3d52a0;
+	background: var(--color2);
 	border-radius: 15px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #7091e6;
+	background: var(--color1);
 }
 
 /* Constants */
@@ -43,7 +51,7 @@ body,
 nav,
 .card {
 	will-change: filter;
-	transition: filter 300ms;
+	transition: filter 500ms;
 }
 
 body {
@@ -53,19 +61,8 @@ body {
 	color: white;
 	/* background: black url("./bg1.jpg") no-repeat fixed center; */
 	/* background-size: cover; */
-	backdrop-filter: blur(5px);
-	background: linear-gradient(
-		135deg,
-		#1a2a6c,
-		/* Deep blue/twilight (left side) */
-			#283c5b,
-		/* Darker blue */ #4568dc,
-		/* Blueish purple */ #7b42ab,
-		/* Rich purple (middle) */ #4568dc,
-		/* Blueish purple */ #283c5b,
-		/* Darker blue */ #1a2a6c
-			/* Deep blue/twilight (right side) */
-	);
+	backdrop-filter: blur(5px) brightness(80%);
+	background: var(--bg-gradient);
 	animation: gradient 15s ease infinite;
 	background-size: 400% 400%;
 }
@@ -82,16 +79,16 @@ body {
 }
 
 header {
-	/* position: sticky; top:0; */
+	position: static;
 	background-color: #00000033;
-	border-radius: 0px 0px 50px 50px;
-	z-index: 500;
+	z-index: 10;
 }
 header:hover .logo,
 header:hover .logo-text,
 header:hover nav {
-	filter: drop-shadow(1em 1em 1em #00ffff);
+	filter: drop-shadow(1em 1em 1em var(--color1))drop-shadow(3em 3em 3em var(--color3))brightness(150%);
 }
+
 .navbar-toggler {
 	filter: invert(1);
 }
@@ -99,21 +96,38 @@ header:hover nav {
 .logo {
 	height: 100px;
 	padding: 5px;
+	opacity: 75%;
 }
 .logo-text {
+	font-family: cursive;
+	background: var(--text-gradient);
 	margin: 0px 50px 0px 0px;
 	font-size: 2rem;
-	font-weight: 900;
+	font-weight: 1000;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 0px 0px #ffffff40;
+	user-select: none;
+}
+
+.nav-item{
+	color: var(--color2);
+	/* text-shadow: 0px 0px #ffffff; */
 }
 
 main {
 	margin: 35px 0px;
 }
+.container{
+	/* background-color: var(---bg); */
+	border-radius: 25px;
+	padding: 2rem;
+}
 
 footer {
 	width: 100%;
 	bottom: 0;
-	background-color: #00000033;
+	background-color: var(--dark-bg);
 	color: #aaa;
 	padding: 10px;
 }

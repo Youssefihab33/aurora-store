@@ -3,7 +3,7 @@ import Card from './Card/Card';
 import Slideshow from './Slideshow/Slideshow';
 import { skinPhoto, hairPhoto, handmadePhoto } from '../assets/pictures/index';
 
-export default function Content() {
+export default function Content(){
 	const [products, setProducts] = useState(null);
 
 	useEffect(() => {
@@ -34,32 +34,21 @@ export default function Content() {
 		return <div>Loading products...</div>;
 	}
 
-	return (
+	return (<>
+		<Slideshow />
 		<main className='container'>
-			<h1 className='fw-bold'>
-				{products &&
-					Array.isArray(products) &&
-					products.map(
-						(
-							product // Check if products is valid before mapping
-						) => (
-							<Card key={product.id} title={product.name} description={product.description} img={product.image} />
-						)
-					)}
-			</h1>
-			<Slideshow />
 			<h1 className='fw-bold'>Aurora Originals</h1>
 			<div className='d-flex flex overflow-x-scroll'>
-				<Card title='Product 1' />
-				<Card title='Product 2' />
-				<Card title='Product 3' />
-				<Card title='Product 4' />
-				<Card title='Product 5' />
-			</div>
-
-			<div className='container'>
-				
-				<Card />
+				{products &&
+					Array.isArray(products) &&
+					products.map((product) => (
+						<Card
+							key={product.id}
+							title={product.name}
+							description={product.description}
+							img={product.image}
+						/>
+					))}
 			</div>
 			<Card
 				title='Skin Care Products'
@@ -76,6 +65,7 @@ export default function Content() {
 				description=''
 				img={handmadePhoto}
 			/>
-		</main>
+			
+		</main></>
 	);
 }

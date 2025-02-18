@@ -1,8 +1,8 @@
-import logoSrc from '../assets/pictures/logo.png';
+import logoSrc from '../assets/pictures/logo1.png';
 
 export default function Header() {
 	return (
-		<header className='container-lg d-flex flex-row justify-content-center align-items-center'>
+		<header className='d-flex flex-row justify-content-center align-items-center'>
 			<img
 				className='navbar-brand logo'
 				src={logoSrc}

@@ -1,14 +1,14 @@
 // import {useState, useEffect} from 'react'
 
 import Header from './components/Header'
-import Content from './components/Content'
+import Homepage from './components/Homepage'
 import Footer from './components/Footer'
 
 export default function App(){
     return(
         <>
             <Header />
-            <Content />
+            <Homepage />
             <Footer />
         </>
     )
