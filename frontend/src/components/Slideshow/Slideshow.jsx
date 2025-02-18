@@ -1,5 +1,5 @@
-import { useSwipeable } from 'react-swipeable';
 import { useState, useEffect } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import './slideshow.css';
 
 export default function Slideshow() {
@@ -20,35 +20,42 @@ export default function Slideshow() {
 		setCurrent(current === 0 ? length - 1 : current - 1);
 	};
 
+	const swipeHandlers = useSwipeable({
+		onSwipedLeft: () => nextSlide(),
+		onSwipedRight: () => prevSlide()
+	  });
+
 	if (!Array.isArray(srcImages) || srcImages.length <= 0) {
 		return null;
 	}
 
 	useEffect(() => {
-        //Implementing the setInterval method
-        const interval = setInterval(() => {
-            nextSlide()
-        }, 7500);
+		//Implementing the setInterval method
+		const interval = setInterval(() => {
+			nextSlide();
+		}, 7500);
 
-        //Clearing the interval
-        return () => clearInterval(interval);
-    }, [current]);
+		//Clearing the interval
+		return () => clearInterval(interval);
+	}, [current]);
 
 	return (
-		<section className='slideshow'>
+		<section {...swipeHandlers} className='slideshow'>
 			<button
 				className='left-arrow'
 				onClick={prevSlide}
 			>
-				<i className='bi-arrow-left-circle'></i>
+				<i className='bi-chevron-compact-left'></i>
 			</button>
 			<button
 				className='right-arrow'
 				onClick={nextSlide}
 			>
-				<i className='bi-arrow-right-circle'></i>
+				<i className='bi-chevron-compact-right'></i>
 			</button>
-			<span className='slide-number'>{current+1} of {length}</span>
+			<span className='slide-number'>
+				{current + 1} of {length}
+			</span>
 			{srcImages.map((slide, index) => {
 				return (
 					<div
