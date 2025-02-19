@@ -1,11 +1,12 @@
 :root {
-	--color1: #7b42ab;
-	--color2: #4568dc;
-	--color3: #283c5b;
-	--color4: #1a2a6c;
+	--color1: #3d52a0;
+	--color2: #7091e6;
+	--color3: #8697c4;
+	--color4: #adbbda;
+	--color5: #ede8f5;
 	--dark-bg: #00000033;
-	--bg-gradient: linear-gradient(135deg,var(--color4),var(--color3),var(--color2),var(--color1),var(--color2),var(--color3),var(--color4));
-	--text-gradient: linear-gradient(135deg,var(--color2),var(--color1),var(--color2));
+	--bg-gradient: radial-gradient(var(--color4),var(--color3),var(--color2),var(--color1));
+	--text-gradient: linear-gradient(135deg,var(--color1),var(--color2),var(--color1));
 
 	font-family: Inter, system-ui, Avenir,
 		Helvetica, Arial, sans-serif;
@@ -64,7 +65,7 @@ body {
 	backdrop-filter: blur(5px) brightness(80%);
 	background: var(--bg-gradient);
 	animation: gradient 15s ease infinite;
-	background-size: 400% 400%;
+	/* background-size: 400% 400%; */
 }
 @keyframes gradient {
 	0% {
@@ -81,6 +82,7 @@ body {
 header {
 	position: static;
 	background-color: #00000033;
+	border-radius: 0px 0px 10px 10px;
 	z-index: 10;
 }
 header:hover .logo,
@@ -111,7 +113,7 @@ header:hover nav {
 }
 
 .nav-item{
-	color: var(--color2);
+	color: var(--color);
 	/* text-shadow: 0px 0px #ffffff; */
 }
 

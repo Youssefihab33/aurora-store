@@ -1,26 +1,13 @@
 import { useState, useEffect } from 'react';
 import Card from './Card/Card';
 import Slideshow from './Slideshow/Slideshow';
+import { fetchData } from '../utils';
 import { skinPhoto, hairPhoto, handmadePhoto } from '../assets/pictures/index';
 
 export default function Content(){
 	const [products, setProducts] = useState(null);
 
 	useEffect(() => {
-		async function fetchData(url) {
-			try {
-				const response = await fetch(url);
-				if (!response.ok) {
-					throw new Error('Network response was not OK!');
-				}
-				const result = await response.json();
-				console.info(result)
-				return result;
-			} catch (error) {
-				console.error('Error fetching data:', error);
-			}
-		}
-
 		async function getProducts() {
 			const fetchedProducts = await fetchData(
 				`http://127.0.0.1:8000/api/products/`
@@ -29,7 +16,7 @@ export default function Content(){
 		}
 		getProducts();
 	}, []);
-
+	console.log('Products:',products)
 	if (!products) {
 		return <div>Loading products...</div>;
 	}
