@@ -2,12 +2,11 @@
 	display: inline-block;
 	color: inherit;
 	overflow: hidden;
-	background-color: #add8e699;
-	/* border-radius: 25px; */
+	background-color: var(--color3);
 	border-radius: 25px;
+	border-color: var(--color1);
 	height: fit-content;
 	max-height: 350px;
-	/* height: 350px; */
 }
 .card > img {
 	margin-bottom: 10px;

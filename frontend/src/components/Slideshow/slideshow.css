@@ -19,10 +19,10 @@
 }
 
 .arrow {
-	/* width: 15%; */
 	font-size: 3rem;
-	color: wheat;
-	background-color: #00000000;
+	color: var(--color3);
+	filter: drop-shadow( 10px 10px 10px #000);
+	background-color: transparent;
 	border: none;
 	z-index: 5;
 	cursor: pointer;

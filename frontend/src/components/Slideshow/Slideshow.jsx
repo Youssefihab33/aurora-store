@@ -8,7 +8,7 @@ export default function Slideshow() {
 	const [ads, setAds] = useState(null);
 	useEffect(() => {
 		async function getAds() {
-			const fetchedAds = await fetchData(`http://127.0.0.1:8000/api/ads/`);
+			const fetchedAds = await fetchData(`${import.meta.env.VITE_API_URL}/api/ads/`);
 			setAds(fetchedAds);
 		}
 		getAds();
@@ -38,7 +38,7 @@ export default function Slideshow() {
 			<Slide {...properties}>
 				{ads.map((ad, index) => (
 					<div key={index} className='each-slide-effect'>
-						<img src={'http://127.0.0.1:8000' + ad.image} alt={ad.name} />
+						<img src={`${import.meta.env.VITE_API_URL}${ad.image}`} alt={ad.name} />
 					</div>
 				))}
 			</Slide>

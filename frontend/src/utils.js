@@ -10,10 +10,3 @@ export async function fetchData(url) {
         console.error('Error fetching data:', error);
     }
 }
-
-export async function getProducts() {
-    const fetchedProducts = await fetchData(
-        `http://127.0.0.1:8000/api/products/`
-    );
-    return fetchedProducts
-}

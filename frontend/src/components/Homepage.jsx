@@ -7,7 +7,7 @@ export default function Homepage() {
 	const [products, setProducts] = useState(null);
 	useEffect(() => {
 		async function getProducts() {
-			const fetchedProducts = await fetchData(`http://127.0.0.1:8000/api/products/`);
+			const fetchedProducts = await fetchData(`${import.meta.env.VITE_API_URL}/api/products/`);
 			setProducts(fetchedProducts);
 		}
 		getProducts();
