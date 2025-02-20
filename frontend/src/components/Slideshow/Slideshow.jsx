@@ -38,8 +38,7 @@ export default function Slideshow() {
 			<Slide {...properties}>
 				{ads.map((ad, index) => (
 					<div key={index} className='each-slide-effect'>
-						<img src={ad.image} alt={ad.name} />
-						{console.log("Currently, this needs fixing. the following src should have the img: ",ad.image)}
+						<img src={'http://127.0.0.1:8000' + ad.image} alt={ad.name} />
 					</div>
 				))}
 			</Slide>

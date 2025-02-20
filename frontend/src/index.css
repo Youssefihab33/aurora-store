@@ -5,11 +5,10 @@
 	--color4: #adbbda;
 	--color5: #ede8f5;
 	--dark-bg: #00000033;
-	--bg-gradient: radial-gradient(var(--color4),var(--color3),var(--color2),var(--color1));
-	--text-gradient: linear-gradient(135deg,var(--color1),var(--color2),var(--color1));
+	--bg-gradient: radial-gradient(var(--color4), var(--color3), var(--color2), var(--color1));
+	--text-gradient: linear-gradient(135deg, var(--color1), var(--color2), var(--color1));
 
-	font-family: Inter, system-ui, Avenir,
-		Helvetica, Arial, sans-serif;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 	font-synthesis: none;
@@ -84,11 +83,13 @@ header {
 	background-color: #00000033;
 	border-radius: 0px 0px 10px 10px;
 	z-index: 10;
+	align-items: center;
+	justify-content: center;
 }
 header:hover .logo,
 header:hover .logo-text,
 header:hover nav {
-	filter: drop-shadow(1em 1em 1em var(--color1))drop-shadow(3em 3em 3em var(--color3))brightness(150%);
+	filter: drop-shadow(1em 1em 1em var(--color1)) drop-shadow(3em 3em 3em var(--color3)) brightness(150%);
 }
 
 .navbar-toggler {
@@ -111,8 +112,11 @@ header:hover nav {
 	text-shadow: 0px 0px #ffffff40;
 	user-select: none;
 }
-
-.nav-item{
+.nav {
+	align-items: center;
+	justify-content: center;
+}
+.nav-item {
 	color: var(--color);
 	/* text-shadow: 0px 0px #ffffff; */
 }
@@ -120,7 +124,7 @@ header:hover nav {
 main {
 	margin: 35px 0px;
 }
-.container{
+.container {
 	/* background-color: var(---bg); */
 	border-radius: 25px;
 	padding: 2rem;
