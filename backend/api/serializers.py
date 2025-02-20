@@ -13,5 +13,5 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class AdSerializer(serializers.ModelSerializer):
     class Meta:
-        model: Ad
+        model = Ad
         fields = '__all__'
