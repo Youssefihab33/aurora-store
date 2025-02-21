@@ -1,3 +1,7 @@
+# My #
+data/static/
+data/media/
+
 # Django #
 *.log
 *.pot
