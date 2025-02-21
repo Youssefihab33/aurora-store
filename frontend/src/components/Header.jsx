@@ -1,8 +1,10 @@
+import Sidebar from './Sidebar/Sidebar';
 import logoSrc from '../assets/pictures/logo.png';
 
 export default function Header() {
 	return (
 		<header className='d-flex flex-row'>
+			<Sidebar/>
 			<img className='navbar-brand logo' src={logoSrc} />
 			<span className='logo-text'>Aurora Gallery</span>
 
@@ -13,9 +15,7 @@ export default function Header() {
 				<div className='collapse navbar-collapse' id='navbarNav'>
 					<ul className='navbar-nav'>
 						<a className='nav-item m-2'>Home</a>
-						<a className='nav-item m-2'>About us!</a>
 						<a className='nav-item m-2'>Work with us!</a>
-						<a className='nav-item m-2'>more...</a>
 						<a className='nav-item m-2'>Profile</a>
 					</ul>
 				</div>

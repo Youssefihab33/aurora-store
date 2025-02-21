@@ -49,7 +49,8 @@ body,
 .logo,
 .logo-text,
 nav,
-.card {
+.card,
+.label-top {
 	will-change: filter;
 	transition: filter 500ms;
 }
