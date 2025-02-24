@@ -4,20 +4,19 @@ services:
   backend:
     build: ./backend
     ports:
-      - "8000:8000"
+      - 8000:8000
     volumes:
-      - ./data/static:/app/static
-      - ./data/media:/app/data
+      - ./data/:/app/data/
       - ./data/db.sqlite3:/app/db.sqlite3
-      - gunicorn_socket:/run
-    environment:
-      - SECRET_KEY=sada
-      - DEBUG=0  # Set to 0 for production
+#      - gunicorn_socket:/run
+
+#      - DEBUG=0 # 0 for production
 
   frontend:
     build: ./frontend
     ports:
       - 90:80
+    env_file: "./frontend/.env"
     depends_on:
       - backend
 
