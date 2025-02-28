@@ -143,17 +143,17 @@ h2 {
 	border: none;
 	text-decoration: none;
 	outline: 0;
-	box-shadow: -1px 6px 19px rgba(247, 129, 10, 0.25);
+	box-shadow: -1px 6px 19px var(--color2);
 	border-radius: 100px;
 }
 .btn-warning:hover {
 	background: none var(--color2);
 	color: #ffffff;
-	box-shadow: -1px 6px 13px rgba(255, 150, 43, 0.35);
+	box-shadow: -1px 6px 13px var(--color4);
 }
 .bg-success {
 	font-size: 1rem;
-	background-color: #f7810a !important;
+	background-color: var(--color1) !important;
 }
 .bg-danger {
 	font-size: 1rem;

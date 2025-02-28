@@ -11,7 +11,10 @@ SECRET_KEY = 'django-insecure-tifx(($0bg^$)-b&+=g+j*0m#(yur%-!l=-^^43o5a+hyh+ff)
 DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "192.168.1.100", "192.168.1.101", "simsy.redirectme.net"]
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://192.168.1.101:5173",
+]
+CORS_ALLOW_ALL_ORIGINS = True # DISABLE THIS IN PRODUCTION
 CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
@@ -37,6 +40,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -44,8 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -115,9 +117,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static/'
+STATIC_ROOT = BASE_DIR.parent / 'data' / 'static/'
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media/'
+MEDIA_ROOT = BASE_DIR.parent / 'data'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

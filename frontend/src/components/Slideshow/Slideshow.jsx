@@ -1,19 +1,10 @@
-import { useState, useEffect } from 'react';
+import { ads } from '../../utils.js';
 import { Slide } from 'react-slideshow-image';
-import { fetchData } from '../../utils';
+
 import 'react-slideshow-image/dist/styles.css';
 import './slideshow.css';
 
 export default function Slideshow() {
-	const [ads, setAds] = useState(null);
-	useEffect(() => {
-		async function getAds() {
-			const fetchedAds = await fetchData(`${import.meta.env.VITE_API_URL}/api/ads/`);
-			setAds(fetchedAds);
-		}
-		getAds();
-	}, []);
-
 	if (!Array.isArray(ads) || ads.length <= 0) {
 		return null;
 	}

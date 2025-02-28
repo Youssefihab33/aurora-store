@@ -54,3 +54,10 @@ nav,
 	will-change: filter;
 	transition: filter 500ms;
 }
+
+.glassy{
+	border-radius: 25px;
+	background-color: rgba(255, 255, 255, 0.1);
+	-webkit-backdrop-filter: blur(1px);
+			backdrop-filter: blur(1px);
+}

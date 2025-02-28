@@ -10,7 +10,7 @@
 }
 
 .each-slide-effect > img {
-	max-width: 99vw;
+	max-width: 100vw;
 	width: 200vh;
 	max-height: 60vh;
 	border-radius: 10px 10px 10px 10px;

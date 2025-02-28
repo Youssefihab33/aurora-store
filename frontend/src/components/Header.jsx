@@ -1,3 +1,4 @@
+import {Link} from 'wouter';
 import Sidebar from './Sidebar/Sidebar';
 import logoSrc from '../assets/pictures/logo.png';
 
@@ -14,9 +15,8 @@ export default function Header() {
 				</button>
 				<div className='collapse navbar-collapse' id='navbarNav'>
 					<ul className='navbar-nav'>
-						<a className='nav-item m-2'>Home</a>
-						<a className='nav-item m-2'>Work with us!</a>
-						<a className='nav-item m-2'>Profile</a>
+						<Link className='nav-item m-2' href="/">Home</Link>
+						<Link className='nav-item m-2' href="/about">About us</Link>
 					</ul>
 				</div>
 			</nav>
